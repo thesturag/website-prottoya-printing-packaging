@@ -15,6 +15,7 @@
   --muted: #555872;
   --line: color-mix(in srgb, var(--ink) 14%, transparent);
   --brand: var(--cyan);
+  --accent-text: #0b85b8; /* cyan deepened to 3:1+ on paper for large text */
   --on-brand: var(--ink);
   --invert-bg: var(--ink);
   --invert-text: var(--paper);
@@ -42,5 +43,6 @@
   --muted: #a6a9c2;
   --line: color-mix(in srgb, var(--paper) 14%, transparent);
   --invert-bg: #181830;
+  --accent-text: var(--cyan);
   --invert-text: var(--paper);
 }

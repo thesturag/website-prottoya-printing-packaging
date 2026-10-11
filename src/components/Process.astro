@@ -8,7 +8,6 @@ const num = (n: number) => n.toLocaleString(lang === 'bn' ? 'bn-BD' : 'en-US');
 <section class="section process" id="process">
   <div class="container grid">
     <div class="side">
-      <p class="kicker" data-reveal>{t.kicker}</p>
       <h2 class="h2" data-reveal>{t.title}</h2>
     </div>
     <ol class="steps" data-steps>
@@ -36,7 +35,6 @@ const num = (n: number) => n.toLocaleString(lang === 'bn' ? 'bn-BD' : 'en-US');
 
 <style>
   .process { background: var(--invert-bg); color: var(--invert-text); border-radius: clamp(1.5rem, 4vw, 3.5rem); margin-inline: clamp(0px, 1vw, 1rem); }
-  .process .kicker { color: color-mix(in srgb, var(--invert-text) 65%, transparent); }
   .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
   .side { position: sticky; top: 7rem; }
   .steps { list-style: none; margin: 0; padding: 0 0 0 3.5rem; position: relative; display: grid; gap: clamp(2rem, 4vw, 3rem); }
