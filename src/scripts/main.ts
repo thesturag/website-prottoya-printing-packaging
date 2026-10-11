@@ -159,7 +159,7 @@ function initMotion() {
       gsap.to(track, {
         x: () => -distance(),
         ease: 'none',
-        scrollTrigger: { trigger: section.querySelector('[data-hscroll-pin]'), start: 'top top', end: () => `+=${distance()}`, pin: true, scrub: 0.8, invalidateOnRefresh: true, anticipatePin: 1 },
+        scrollTrigger: { trigger: section.querySelector('[data-hscroll-pin]'), start: 'center center', end: () => `+=${distance()}`, pin: true, scrub: 0.8, invalidateOnRefresh: true, anticipatePin: 1 },
       });
     },
   });
