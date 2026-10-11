@@ -6,7 +6,7 @@ const { lang } = Astro.props as { lang: Lang };
 const v = copy[lang].visit;
 const t = copy[lang].contact;
 ---
-<section class="section visit">
+<section class="section visit" id="visit">
   <div class="container vgrid">
     <div class="vimg" data-parallax-wrap>
       <Image src={photo(30)} alt="" widths={[600, 900, 1200]} sizes="(max-width: 900px) 92vw, 45vw" data-parallax />
@@ -29,7 +29,6 @@ const t = copy[lang].contact;
       <p class="lead" data-reveal>{t.body}</p>
       <ul class="channels" data-reveal>
         <li><a href={`tel:${contact.phoneIntl}`}><Icon name="phone" /><span><small>{t.call}</small>{contact.phone}</span></a></li>
-        <li><a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noopener"><Icon name="whatsapp" /><span><small>WhatsApp</small>{contact.phone}</span></a></li>
         <li><a href={`mailto:${contact.email}`}><Icon name="mail" /><span><small>{t.email}</small>{contact.email}</span></a></li>
       </ul>
     </div>

@@ -2,11 +2,10 @@
 import { getImage } from 'astro:assets';
 import Logo from './Logo.astro';
 import Icon from './Icon.astro';
-import { copy, contact, cubeFaces, photo, type Lang } from '../data/site';
+import { copy, cubeFaces, photo, type Lang } from '../data/site';
 const { lang } = Astro.props as { lang: Lang };
 const t = copy[lang].hero;
 const faces = await Promise.all(cubeFaces.map((n) => getImage({ src: photo(n), widths: [240, 480], height: 480, width: 480, fit: 'cover', format: 'webp' })));
-const wa = `https://wa.me/${contact.whatsapp}`;
 ---
 <section class="hero" data-hero>
   <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span>
@@ -20,7 +19,7 @@ const wa = `https://wa.me/${contact.whatsapp}`;
       <p class="sub intro" style="--d: 0.35s">{t.sub}</p>
       <div class="ctas intro" style="--d: 0.45s">
         <a class="btn" href="#contact" data-magnetic>{t.cta}<Icon name="arrow" /></a>
-        <a class="btn ghost" href={wa} target="_blank" rel="noopener" data-magnetic><Icon name="whatsapp" />{t.whatsapp}</a>
+        <a class="btn ghost" href="#work" data-magnetic>{t.work}</a>
       </div>
     </div>
     <div class="stage" aria-hidden="true">
