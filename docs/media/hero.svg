@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="t">
+  <title id="t">Prottoya Printing &amp; Packaging: packaging that sells before it's opened</title>
+  <defs>
+    <path id="p" fill-rule="evenodd" d="M.26 .86V.16H.55A.215 .215 0 0 1 .55 .59H.43V.86ZM.43 .3H.54A.075 .075 0 0 1 .54 .45H.43Z"/>
+    <radialGradient id="glow" cx="0.8" cy="0.35" r="0.6">
+      <stop offset="0" stop-color="#13ABE4" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#13ABE4" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="band"><rect x="0" y="360" width="1200" height="80"/></clipPath>
+    <clipPath id="card"><rect width="1200" height="440" rx="24"/></clipPath>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif}
+      .float{animation:float 6s ease-in-out infinite;transform-origin:930px 190px}
+      .spin{animation:spin 40s linear infinite;transform-origin:930px 190px}
+      .dot{animation:pulse 2.4s ease-in-out infinite}
+      .d2{animation-delay:.3s}.d3{animation-delay:.6s}.d4{animation-delay:.9s}
+      .marq{animation:marq 22s linear infinite}
+      @keyframes float{50%{transform:translateY(-12px)}}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      @keyframes pulse{50%{opacity:.35}}
+      @keyframes marq{to{transform:translateX(-570px)}}
+      @media (prefers-reduced-motion:reduce){.float,.spin,.dot,.marq{animation:none}}
+    </style>
+  </defs>
+  <g clip-path="url(#card)">
+  <rect width="1200" height="440" rx="24" fill="#0D0D1A"/>
+  <rect width="1200" height="440" rx="24" fill="url(#glow)"/>
+  <!-- crop marks -->
+  <g stroke="#ffffff" stroke-opacity=".25" stroke-width="1.5" fill="none">
+    <path d="M40 64V40h24M1160 64V40h-24M40 316v24h24M1160 316v24h-24"/>
+  </g>
+  <!-- registration ring -->
+  <g class="spin" stroke="#ffffff" stroke-opacity=".14" fill="none">
+    <circle cx="930" cy="190" r="140"/>
+    <path d="M930 30v320M770 190h320"/>
+  </g>
+  <!-- logo mark -->
+  <g class="float">
+    <g transform="translate(930 190) scale(1.05)">
+      <g stroke="#13ABE4" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" fill="none">
+        <path d="M0-100 86.6-50V50L0 100-86.6 50V-50Z"/>
+        <path d="M-86.6-50 0 0 86.6-50M0 0V100"/>
+      </g>
+      <g fill="#13ABE4">
+        <use href="#p" transform="matrix(86.6 50 0 100 -86.6 -50)"/>
+        <use href="#p" transform="matrix(86.6 -50 0 100 0 0)"/>
+        <use href="#p" transform="matrix(86.6 -50 86.6 50 -86.6 -50)"/>
+      </g>
+    </g>
+  </g>
+  <!-- copy -->
+  <g>
+    <circle class="dot" cx="88" cy="96" r="7" fill="#13ABE4"/>
+    <circle class="dot d2" cx="108" cy="96" r="7" fill="#C8288C"/>
+    <circle class="dot d3" cx="128" cy="96" r="7" fill="#F0C828"/>
+    <circle class="dot d4" cx="148" cy="96" r="7" fill="#F07828"/>
+    <text x="168" y="102" fill="#A9ADC6" font-size="17" font-weight="600" letter-spacing="3">PRINTING &amp; PACKAGING · BABU BAZAR, DHAKA</text>
+    <text x="80" y="176" fill="#F4F6F7" font-size="66" font-weight="800" letter-spacing="-2">Prottoya</text>
+    <text x="80" y="244" fill="#13ABE4" font-size="44" font-weight="800" font-style="italic" letter-spacing="-1">Packaging that sells</text>
+    <text x="80" y="296" fill="#F4F6F7" font-size="44" font-weight="800" letter-spacing="-1">before it’s opened.</text>
+  </g>
+  <!-- marquee band -->
+  <rect y="360" width="1200" height="80" fill="#181830"/>
+  <g clip-path="url(#band)">
+    <g class="marq" fill="#F4F6F7" font-size="26" font-weight="800">
+      <g id="row">
+        <text x="20" y="410">Mishti boxes</text><circle cx="200" cy="401" r="5" fill="#C8288C"/>
+        <text x="225" y="410">Stickers</text><circle cx="345" cy="401" r="5" fill="#F0C828"/>
+        <text x="370" y="410">Pizza boxes</text><circle cx="545" cy="401" r="5" fill="#13ABE4"/>
+      </g>
+      <use href="#row" x="570"/>
+      <use href="#row" x="1140"/>
+      <use href="#row" x="1710"/>
+    </g>
+  </g>
+  </g>
+</svg>
