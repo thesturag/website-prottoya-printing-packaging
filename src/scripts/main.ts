@@ -51,11 +51,12 @@ form?.addEventListener('submit', (e) => {
   const status = form.querySelector<HTMLElement>('.status')!;
   const fields = ['name', 'phone', 'product', 'quantity', 'details'] as const;
   const values = Object.fromEntries(fields.map((k) => [k, String(data.get(k) ?? '').trim()]));
+  const m = JSON.parse(form.dataset.msg ?? '{}') as Record<'req' | 'product' | 'qty' | 'details', string>;
   const text = [
-    `Quote request from ${values.name} (${values.phone})`,
-    `Product: ${values.product}`,
-    values.quantity && `Quantity: ${values.quantity}`,
-    values.details && `Details: ${values.details}`,
+    `${m.req} ${values.name} (${values.phone})`,
+    `${m.product}: ${values.product}`,
+    values.quantity && `${m.qty}: ${values.quantity}`,
+    values.details && `${m.details}: ${values.details}`,
   ].filter(Boolean).join('\n');
   window.open(`https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   status.textContent = form.dataset.sending ?? '';
