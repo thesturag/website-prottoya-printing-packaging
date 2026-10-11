@@ -14,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
 }
-:lang(bn) body, body:lang(bn) { --font-sans: 'Hind Siliguri', 'Inter Tight', system-ui, sans-serif; line-height: 1.75; }
+:lang(bn) body, body:lang(bn) { --font-sans: 'Hind Siliguri', var(--font-inter-tight); line-height: 1.75; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 button { font: inherit; color: inherit; }
@@ -51,6 +51,8 @@ p { margin: 0; text-wrap: pretty; }
 .js-motion .hero .line-mask:nth-child(2) > span { animation-delay: 0.08s; }
 .js-motion .hero .line-mask:nth-child(3) > span { animation-delay: 0.16s; }
 .js-motion .intro { animation: fade-up 1s var(--ease-out) var(--d, 0s) both; }
+/* Phones: hero copy appears at once (it is the LCP element); desktop keeps the fade. */
+@media (max-width: 900px) { .js-motion .intro { animation: none; } }
 @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes fade-up { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: none; } }
 

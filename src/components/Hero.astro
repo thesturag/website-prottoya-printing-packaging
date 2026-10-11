@@ -5,7 +5,7 @@ import Icon from './Icon.astro';
 import { copy, contact, cubeFaces, photo, type Lang } from '../data/site';
 const { lang } = Astro.props as { lang: Lang };
 const t = copy[lang].hero;
-const faces = await Promise.all(cubeFaces.map((n) => getImage({ src: photo(n), width: 480, height: 480, fit: 'cover', format: 'webp' })));
+const faces = await Promise.all(cubeFaces.map((n) => getImage({ src: photo(n), widths: [240, 480], height: 480, width: 480, fit: 'cover', format: 'webp' })));
 const wa = `https://wa.me/${contact.whatsapp}`;
 ---
 <section class="hero" data-hero>
@@ -28,7 +28,7 @@ const wa = `https://wa.me/${contact.whatsapp}`;
       <div class="scene" data-cube-scene>
         <div class="cube" data-cube>
           <div class="face f-front logo-face"><Logo size={200} /></div>
-          {faces.map((img, i) => <div class={`face f-${['back', 'right', 'left', 'top', 'bottom'][i]}`}><img src={img.src} alt="" width="480" height="480" fetchpriority="low" decoding="async" /></div>)}
+          {faces.map((img, i) => <div class={`face f-${['back', 'right', 'left', 'top', 'bottom'][i]}`}><img src={img.src} srcset={img.srcSet.attribute} sizes="(max-width: 900px) 180px, 480px" alt="" width="480" height="480" fetchpriority="low" decoding="async" /></div>)}
         </div>
         <div class="shadow"></div>
       </div>

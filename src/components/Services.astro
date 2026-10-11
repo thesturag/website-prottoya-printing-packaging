@@ -18,7 +18,7 @@ const t = copy[lang].services;
             <p>{s.body[lang]}</p>
             <ul class="items">{s.items[lang].map((item) => <li>{item}</li>)}</ul>
           </div>
-          <Image class="thumb" src={photo(s.image)} alt={s.title[lang]} widths={[480, 800]} sizes="(max-width: 900px) 90vw, 1px" />
+          <Image class="thumb" src={photo(s.image)} alt={s.title[lang]} widths={[400, 640]} quality={60} sizes="(max-width: 900px) 90vw, 1px" />
           <a class="go" href="#contact" data-product={s.id} aria-label={`${t.more}: ${s.title[lang]}`}><Icon name="arrow" /></a>
         </li>
       ))}

@@ -19,8 +19,8 @@
   --invert-bg: var(--ink);
   --invert-text: var(--paper);
 
-  --font-sans: 'Inter Tight', 'Hind Siliguri', system-ui, sans-serif;
-  --font-display: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
+  --font-sans: var(--font-inter-tight);
+  --font-display: var(--font-bricolage);
 
   --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
   --step-0: clamp(0.95rem, 0.92rem + 0.15vw, 1.0625rem);
