@@ -1,0 +1,730 @@
+{
+  "source": "https://www.facebook.com/ProttoyaPrintingPackaging",
+  "collectedAt": "2026-10-12",
+  "pageId": "112144684893667",
+  "pageCreated": "2022-07-11",
+  "name": {
+    "en": "Prottoya Printing & Packaging",
+    "bn": "প্রত্যয় প্রিন্টিং ও প্যাকেজিং",
+    "displayedOnFacebook": "P r o t t o y a Printing & Packaging"
+  },
+  "category": "Printing service",
+  "followers": "12K (12,214)",
+  "reviews": {
+    "recommendPercent": 100,
+    "count": 7
+  },
+  "description": "We make all kinds of paper-related customized printing and packaging. In addition, we invite you to our display center. Get the best solution to your product packaging problem at a low cost.",
+  "descriptionOriginal": "🎗️Hey Sir, we make all kinds of paper related Customize printing and packaging. In addition,We invite you to our display center. Get the best solution to your product packaging problem at a low cost.",
+  "contacts": {
+    "phone": "01846-846416",
+    "phoneIntl": "+8801846846416",
+    "whatsapp": null,
+    "whatsappNote": "Not listed on the page; confirm with client whether the mobile number is on WhatsApp",
+    "email": "prottoyabd68@gmail.com",
+    "website": "http://www.prottoyaprintingbd.com/ (did not respond when checked)",
+    "facebook": "https://www.facebook.com/ProttoyaPrintingPackaging"
+  },
+  "address": {
+    "street": "18, Sayed Hasan Ali Lane, Babu Bazar",
+    "city": "Dhaka",
+    "postcode": "1100",
+    "country": "Bangladesh",
+    "full": "18, Sayed Hasan Ali Lane, Babu Bazar, Dhaka 1100, Bangladesh",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=18+Sayed+Hasan+Ali+Lane+Babu+Bazar+Dhaka+1100",
+    "coordinates": null
+  },
+  "hours": "Always open",
+  "pageServices": [
+    "Delivery",
+    "Online booking",
+    "Online classes"
+  ],
+  "serviceArea": [
+    "Dhaka",
+    "Gazipur",
+    "Narayanganj",
+    "Chittagong",
+    "Cox's Bazar",
+    "Khulna",
+    "Rajshahi",
+    "Sylhet",
+    "Barisal",
+    "Dinajpur"
+  ],
+  "offerTerms": {
+    "minimumOrder": "500 pcs typical (per post captions)",
+    "customization": "Custom design & size; company name/logo printed",
+    "stickerPrice": "Custom stickers from 2 Tk/pc (min 500 pcs, per a post)"
+  },
+  "services": [
+    {
+      "group": "Food & restaurant packaging",
+      "items": [
+        "Pizza boxes (full & slice)",
+        "Burger boxes & burger trays",
+        "Burger & tacos box",
+        "Sandwich box",
+        "Wings box",
+        "French fry boxes",
+        "Set menu box",
+        "Partition box",
+        "Round tray (momo / fuchka)",
+        "Brown tray",
+        "Tray paper",
+        "Singara / fry paper cone",
+        "Foil box branding",
+        "Cup jacket",
+        "Restaurant parcel bags (with/without window)",
+        "Doggy bag",
+        "Party box"
+      ]
+    },
+    {
+      "group": "Sweets, bakery & confectionery",
+      "items": [
+        "Mishti / sweet boxes (half kg, 1 kg, premium)",
+        "Cake boxes & bento cake boxes",
+        "Chocolate boxes & chocolate combo box",
+        "Lachcha semai box with handle",
+        "Honey box",
+        "Cookie / dessert window boxes"
+      ]
+    },
+    {
+      "group": "Retail & product packaging",
+      "items": [
+        "Custom offset-printed product boxes",
+        "Mobile cover / accessory boxes",
+        "Shoe / apparel boxes",
+        "Rigid & gift boxes",
+        "Paper shopping bags"
+      ]
+    },
+    {
+      "group": "Labels & print",
+      "items": [
+        "Custom stickers (round, logo, waterproof glossy)",
+        "Drinks glass / juice cup stickers",
+        "Branding print"
+      ]
+    }
+  ],
+  "palette": {
+    "note": "Extracted from the logo (profile picture): a sky-blue isometric cube built from three P letterforms on white, framed in lighter blue, over a multicolour paint-splash background.",
+    "colors": [
+      {
+        "name": "Prottoya Blue (logo mark)",
+        "hex": "#13ABE4"
+      },
+      {
+        "name": "Frame Blue",
+        "hex": "#45A6D8"
+      },
+      {
+        "name": "Splash Orange",
+        "hex": "#F07828"
+      },
+      {
+        "name": "Splash Magenta",
+        "hex": "#C8288C"
+      },
+      {
+        "name": "Splash Yellow",
+        "hex": "#F0C828"
+      },
+      {
+        "name": "Ink Navy",
+        "hex": "#181830"
+      },
+      {
+        "name": "Paper White",
+        "hex": "#F4F6F7"
+      }
+    ]
+  },
+  "images": [
+    {
+      "file": "logo.jpg",
+      "role": "logo (profile picture; 500x500 is the largest Facebook serves)",
+      "width": 500,
+      "height": 500
+    },
+    {
+      "file": "logo-mark.png",
+      "role": "logo mark cropped from profile picture, upscaled 4x from ~250px",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "file": "logo-mark-transparent.png",
+      "role": "logo mark in #13ABE4 on transparent (derived)",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "file": "cover.png",
+      "role": "cover photo",
+      "width": 2563,
+      "height": 975
+    },
+    {
+      "file": "work-01.jpg",
+      "role": "portfolio",
+      "title": "Unique French fry box",
+      "caption": "Unique French FrY Box",
+      "width": 945,
+      "height": 1590,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-02.jpg",
+      "role": "promo-graphic",
+      "title": "Packaging range overview (promo graphic)",
+      "caption": null,
+      "width": 2048,
+      "height": 2048,
+      "orientation": "square"
+    },
+    {
+      "file": "work-03.jpg",
+      "role": "promo-graphic",
+      "title": "Pizza box range (promo graphic)",
+      "caption": null,
+      "width": 2048,
+      "height": 2048,
+      "orientation": "square"
+    },
+    {
+      "file": "work-04.jpg",
+      "role": "promo-graphic",
+      "title": "Party box range (promo graphic)",
+      "caption": null,
+      "width": 2048,
+      "height": 2048,
+      "orientation": "square"
+    },
+    {
+      "file": "work-05.jpg",
+      "role": "promo-graphic",
+      "title": "Custom offset packaging (promo graphic)",
+      "caption": null,
+      "width": 2048,
+      "height": 2048,
+      "orientation": "square"
+    },
+    {
+      "file": "work-06.jpg",
+      "role": "portfolio",
+      "title": "Premium chocolate box",
+      "caption": "🍫 Premium  Chocolate Box 🍫\n- Minimum Quantity - 500 Pcs. \nCustomize Design & Size Available. \n\n 🌈 Run With P r o t t o y a Printing & Packaging...",
+      "width": 900,
+      "height": 1600,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-07.jpg",
+      "role": "portfolio",
+      "title": "Drinks glass / juice cup sticker",
+      "caption": "🧋Drinks Glass / Juice Cup Sticker \n🌈 Customize Your Packaging  With Low Cost 🚨\n🔥 Minimum Quantity - 2000 Pcs.\n ✅ Glossy Or Mat Finishing Available \n🎯...",
+      "width": 1536,
+      "height": 1536,
+      "orientation": "square"
+    },
+    {
+      "file": "work-08.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-09.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-10.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-11.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-12.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 736,
+      "height": 981,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-13.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 736,
+      "height": 736,
+      "orientation": "square"
+    },
+    {
+      "file": "work-14.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-15.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 736,
+      "height": 736,
+      "orientation": "square"
+    },
+    {
+      "file": "work-16.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-17.jpg",
+      "role": "portfolio",
+      "title": "Custom product packaging - burger boxes",
+      "caption": "🌈 Print Your Product Packaging \n 🔥 Customize Your Dream Packaging \n- Minimum Quantity 500 Pcs\n- Hot Deal For - 250 Pcs.\n\n 🏃‍♂️Run With P r o t t o y a...",
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-18.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-19.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-20.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 600,
+      "height": 600,
+      "orientation": "square"
+    },
+    {
+      "file": "work-21.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 736,
+      "height": 736,
+      "orientation": "square"
+    },
+    {
+      "file": "work-22.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 736,
+      "height": 599,
+      "orientation": "landscape"
+    },
+    {
+      "file": "work-23.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 736,
+      "height": 736,
+      "orientation": "square"
+    },
+    {
+      "file": "work-24.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 736,
+      "height": 981,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-25.jpg",
+      "role": "portfolio",
+      "title": "Chocolate combo box",
+      "caption": "Chocolate Combo Box",
+      "width": 720,
+      "height": 960,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-26.jpg",
+      "role": "portfolio",
+      "title": "Custom round sticker printing",
+      "caption": "🎯 Custom Stickers Printing \nMinimum  Quantity - 500 Pcs \n৳ Per Pcs - 2 /- Tk. \n 🔥 Hot deal  For 5000 Pcs. \n৳ Per Pcs - 0.50 /- Tk.",
+      "width": 1542,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-27.jpg",
+      "role": "portfolio",
+      "title": "Logo sticker - waterproof & glossy finish",
+      "caption": "🎯 Custom Stickers Printing \nMinimum  Quantity - 500 Pcs \n৳ Per Pcs - 2 /- Tk. \n 🔥 Hot deal  For 5000 Pcs. \n৳ Per Pcs - 0.50 /- Tk.",
+      "width": 1512,
+      "height": 2016,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-28.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1200,
+      "height": 1600,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-29.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 902,
+      "height": 1203,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-30.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1530,
+      "height": 2040,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-31.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1530,
+      "height": 2040,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-32.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-33.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1536,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-34.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1080,
+      "height": 1080,
+      "orientation": "square"
+    },
+    {
+      "file": "work-35.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 1080,
+      "height": 1080,
+      "orientation": "square"
+    },
+    {
+      "file": "work-36.jpg",
+      "role": "portfolio",
+      "title": null,
+      "caption": null,
+      "width": 720,
+      "height": 1280,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-37.jpg",
+      "role": "portfolio",
+      "title": "Tray paper",
+      "caption": "Tray Paper Available 🍟\nCustomize Your Dream Branding",
+      "width": 1600,
+      "height": 1204,
+      "orientation": "landscape"
+    },
+    {
+      "file": "work-38.jpg",
+      "role": "portfolio",
+      "title": "Half-kg sweet box",
+      "caption": "💥 Half Kg Sweet Box 🥡\n- 300 GSM Swedish  Board \n- Inside Foil\n- Colourful  Print \n- Size : Half Kg / 1 Kg / 2 Kg \n- Size : Depend On Your Product's \n-...",
+      "width": 1080,
+      "height": 1820,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-39.jpg",
+      "role": "portfolio",
+      "title": "Slice pizza box",
+      "caption": "🎯 স্লাইস পিৎজা বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ...",
+      "width": 1080,
+      "height": 760,
+      "orientation": "landscape"
+    },
+    {
+      "file": "work-40.jpg",
+      "role": "portfolio",
+      "title": "Honey box - 1 kg",
+      "caption": "🎯 মধর বক্স - ১ কেজি\n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ...",
+      "width": 752,
+      "height": 1020,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-41.jpg",
+      "role": "portfolio",
+      "title": "Chocolate box",
+      "caption": "🎯 চকলেট বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 752,
+      "height": 1020,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-42.jpg",
+      "role": "portfolio",
+      "title": "Wings box",
+      "caption": "🎯 উইংস বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 1828,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-43.jpg",
+      "role": "portfolio",
+      "title": "Lachcha semai box with handle",
+      "caption": "🎯 হাতলসহ লাচ্ছা সেমাই বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥...",
+      "width": 752,
+      "height": 1020,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-44.jpg",
+      "role": "portfolio",
+      "title": "Restaurant parcel bag",
+      "caption": "🎯 রেস্টুরেন্ট পার্সেল \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ...",
+      "width": 752,
+      "height": 1020,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-45.jpg",
+      "role": "portfolio",
+      "title": "Parcel bag with window",
+      "caption": "🎯  পার্সেল ব্যাগ উইথ উইন্ডো \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥...",
+      "width": 752,
+      "height": 1020,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-46.jpg",
+      "role": "portfolio",
+      "title": "Partition box",
+      "caption": "🎯 পার্টিশন বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 1080,
+      "height": 1440,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-47.jpg",
+      "role": "portfolio",
+      "title": "Singara / fry paper cone",
+      "caption": "🎯 সিংগাড়া / ফ্রাই পেপার কোন\n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥...",
+      "width": 1080,
+      "height": 1440,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-48.jpg",
+      "role": "portfolio",
+      "title": "Foil box branding",
+      "caption": "🎯 ফয়েল বক্স ব্যান্ডিং\n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ...",
+      "width": 866,
+      "height": 945,
+      "orientation": "square"
+    },
+    {
+      "file": "work-49.jpg",
+      "role": "portfolio",
+      "title": "Cup jacket",
+      "caption": "🎯 কাপ জ্যাকেট \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 752,
+      "height": 1020,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-50.jpg",
+      "role": "portfolio",
+      "title": "Round tray (momo / fuchka)",
+      "caption": "🎯 রাউন্ড ট্রে /মোমো / ফুসকা \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥...",
+      "width": 752,
+      "height": 1020,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-51.jpg",
+      "role": "portfolio",
+      "title": "Brown tray",
+      "caption": "🎯 ব্রাউন ট্রে \n🌐 আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 1927,
+      "height": 2048,
+      "orientation": "square"
+    },
+    {
+      "file": "work-52.jpg",
+      "role": "portfolio",
+      "title": "Doggy bag (1-colour print)",
+      "caption": "🎯 ডগি ব্যাগ \n১ কালার প্রিন্ট ও সাইজ অনুয়ায়ী দাম।\n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের...",
+      "width": 1020,
+      "height": 667,
+      "orientation": "landscape"
+    },
+    {
+      "file": "work-53.jpg",
+      "role": "portfolio",
+      "title": "Colourful pizza box",
+      "caption": "🎯 কালারফুল পিৎজা বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ...",
+      "width": 1542,
+      "height": 1862,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-54.jpg",
+      "role": "portfolio",
+      "title": "Cake box",
+      "caption": "🎯 কেক বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন জানতে...",
+      "width": 1488,
+      "height": 1661,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-55.jpg",
+      "role": "portfolio",
+      "title": "French fries box",
+      "caption": "🎯 বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন জানতে...",
+      "width": 1595,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-56.jpg",
+      "role": "portfolio",
+      "title": "Set menu box",
+      "caption": "🎯 সেট মেনু বক্স \n🌐 আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 960,
+      "height": 1280,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-57.jpg",
+      "role": "portfolio",
+      "title": "Sandwich box",
+      "caption": "🎯 স্যানডুইচ বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 1622,
+      "height": 2048,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-58.jpg",
+      "role": "portfolio",
+      "title": "Burger tray",
+      "caption": "🎯 বার্গার  ট্রে  \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 720,
+      "height": 1029,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-59.jpg",
+      "role": "portfolio",
+      "title": "Chocolate box",
+      "caption": "🎯 চকলেট বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 736,
+      "height": 1308,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-60.jpg",
+      "role": "portfolio",
+      "title": "Premium sweet (mishti) box",
+      "caption": "🎯 প্রিমিয়াম মিস্টি বক্স  বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥...",
+      "width": 2048,
+      "height": 2048,
+      "orientation": "square"
+    },
+    {
+      "file": "work-61.jpg",
+      "role": "portfolio",
+      "title": "Burger & tacos box",
+      "caption": "🎯 বার্গার ও টাকোস বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ...",
+      "width": 1023,
+      "height": 1280,
+      "orientation": "portrait"
+    },
+    {
+      "file": "work-62.jpg",
+      "role": "portfolio",
+      "title": "Sweet (mishti) box",
+      "caption": "🎯 মিস্টি  বক্স \n🌐আপনার কোম্পানির নাম, লোগ ও পছন্দ অনুযায়ী ডিজাইনসহ যে কোন সাইজের প্রিমিয়াম বক্স বানিয়ে নিতে পারেন আমাদের কারখানা থেকে। \n🔥 প্রাইজ কোটেশন...",
+      "width": 2048,
+      "height": 2048,
+      "orientation": "square"
+    }
+  ]
+}
