@@ -83,7 +83,6 @@ function initMotion() {
   );
 
   /* Hero intro */
-  gsap.to('.hero .line-mask > span', { y: 0, duration: 1.3, ease: 'expo.out', stagger: 0.09, delay: 0.15 });
   gsap.fromTo('[data-cube-scene]', { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.6, ease: 'expo.out', delay: 0.2 });
 
   /* Scroll reveals */

@@ -13,12 +13,12 @@ const wa = `https://wa.me/${contact.whatsapp}`;
   <span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
   <div class="container grid">
     <div class="copy">
-      <p class="kicker" data-reveal>{t.eyebrow}</p>
+      <p class="kicker intro">{t.eyebrow}</p>
       <h1 class="title">
         {t.title.map((line, i) => <span class="line-mask"><span class={i === 1 ? 'accent' : undefined}>{line}</span></span>)}
       </h1>
-      <p class="sub" data-reveal>{t.sub}</p>
-      <div class="ctas" data-reveal>
+      <p class="sub intro" style="--d: 0.35s">{t.sub}</p>
+      <div class="ctas intro" style="--d: 0.45s">
         <a class="btn" href="#contact" data-magnetic>{t.cta}<Icon name="arrow" /></a>
         <a class="btn ghost" href={wa} target="_blank" rel="noopener" data-magnetic><Icon name="whatsapp" />{t.whatsapp}</a>
       </div>

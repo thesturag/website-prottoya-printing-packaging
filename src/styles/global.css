@@ -46,6 +46,13 @@ p { margin: 0; text-wrap: pretty; }
 .js-motion [data-reveal] { opacity: 0; transform: translateY(2.5rem); }
 .js-motion .line-mask { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
 .js-motion .line-mask > span { display: block; transform: translateY(105%); }
+/* Hero intro runs in CSS so it starts at first paint, not after the JS bundle loads. */
+.js-motion .hero .line-mask > span { animation: rise 1.2s var(--ease-out) both; }
+.js-motion .hero .line-mask:nth-child(2) > span { animation-delay: 0.08s; }
+.js-motion .hero .line-mask:nth-child(3) > span { animation-delay: 0.16s; }
+.js-motion .intro { animation: fade-up 1s var(--ease-out) var(--d, 0s) both; }
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
