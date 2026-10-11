@@ -132,7 +132,7 @@ export const copy = {
       title: 'Touch the samples before you order.',
       body: 'Visit our display center in Babu Bazar to see board, finishes and hundreds of box styles in person.',
       address: '18, Sayed Hasan Ali Lane, Babu Bazar, Dhaka 1100',
-      hours: 'Open every day',
+      hours: 'Call before you visit',
       map: 'Open in Google Maps',
     },
     contact: {
@@ -196,7 +196,7 @@ export const copy = {
       title: 'অর্ডারের আগে স্যাম্পল হাতে নিয়ে দেখুন।',
       body: 'বাবুবাজারে আমাদের ডিসপ্লে সেন্টারে এসে বোর্ড, ফিনিশিং আর শত শত বক্সের ডিজাইন সরাসরি দেখুন।',
       address: '১৮, সৈয়দ হাসান আলী লেন, বাবুবাজার, ঢাকা ১১০০',
-      hours: 'প্রতিদিন খোলা',
+      hours: 'আসার আগে কল করুন',
       map: 'গুগল ম্যাপে দেখুন',
     },
     contact: {
