@@ -1,34 +1,46 @@
-/* Brand colors are placeholders until the logo palette is extracted (#1). */
+/* Palette from the Prottoya logo: cube blue plus the CMYK paint-splash accents. */
 :root {
-  --brand: oklch(0.62 0.19 35);
-  --brand-ink: oklch(0.98 0.01 80);
-  --accent: oklch(0.55 0.14 250);
+  --cyan: #13abe4;
+  --cyan-soft: #45a6d8;
+  --magenta: #c8288c;
+  --yellow: #f0c828;
+  --orange: #f07828;
+  --ink: #181830;
+  --paper: #f4f6f7;
 
-  --bg: oklch(0.985 0.004 80);
-  --surface: oklch(0.96 0.006 80);
-  --text: oklch(0.2 0.01 60);
-  --muted: oklch(0.48 0.01 60);
-  --line: oklch(0.88 0.008 80);
+  --bg: var(--paper);
+  --surface: #ffffff;
+  --surface-2: #e9edf0;
+  --text: var(--ink);
+  --muted: #555872;
+  --line: color-mix(in srgb, var(--ink) 14%, transparent);
+  --brand: var(--cyan);
+  --on-brand: var(--ink);
+  --invert-bg: var(--ink);
+  --invert-text: var(--paper);
 
   --font-sans: 'Inter Tight', 'Hind Siliguri', system-ui, sans-serif;
-  --font-display: 'Bricolage Grotesque', 'Inter Tight', 'Hind Siliguri', sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
 
-  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --step-1: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
-  --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.6rem);
-  --step-3: clamp(2.2rem, 1.6rem + 3vw, 4.5rem);
-  --step-4: clamp(3rem, 2rem + 6vw, 8rem);
+  --step--1: clamp(0.85rem, 0.82rem + 0.15vw, 0.95rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.5rem);
+  --step-3: clamp(2.2rem, 1.5rem + 3.2vw, 4.5rem);
+  --step-4: clamp(2.9rem, 1.6rem + 6.4vw, 8.5rem);
 
-  --space: clamp(1rem, 0.8rem + 1vw, 1.5rem);
   --gutter: max(16px, 4vw);
-  --radius: 1.25rem;
+  --radius: 1.5rem;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-[data-theme='dark'] {
-  --bg: oklch(0.16 0.008 60);
-  --surface: oklch(0.21 0.01 60);
-  --text: oklch(0.95 0.008 80);
-  --muted: oklch(0.7 0.01 70);
-  --line: oklch(0.3 0.01 60);
+:root[data-theme='dark'] {
+  --bg: #0d0d1a;
+  --surface: #181830;
+  --surface-2: #20203c;
+  --text: var(--paper);
+  --muted: #a6a9c2;
+  --line: color-mix(in srgb, var(--paper) 14%, transparent);
+  --invert-bg: #181830;
+  --invert-text: var(--paper);
 }

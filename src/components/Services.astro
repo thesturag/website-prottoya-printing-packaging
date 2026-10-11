@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { copy, services, photo, type Lang } from '../data/site';
+const { lang } = Astro.props as { lang: Lang };
+const t = copy[lang].services;
+---
+<section class="section services" id="services">
+  <div class="container">
+    <p class="kicker" data-reveal>{t.kicker}</p>
+    <h2 class="h2" data-reveal>{t.title}</h2>
+    <ol class="list" data-hover-list>
+      {services.map((s, i) => (
+        <li class="row" data-reveal data-hover-item={i}>
+          <span class="num">0{i + 1}</span>
+          <div class="main">
+            <h3>{s.title[lang]}</h3>
+            <p>{s.body[lang]}</p>
+            <ul class="items">{s.items[lang].map((item) => <li>{item}</li>)}</ul>
+          </div>
+          <Image class="thumb" src={photo(s.image)} alt={s.title[lang]} widths={[480, 800]} sizes="(max-width: 900px) 90vw, 1px" />
+          <a class="go" href="#contact" data-product={s.id} aria-label={`${t.more}: ${s.title[lang]}`}><Icon name="arrow" /></a>
+        </li>
+      ))}
+    </ol>
+  </div>
+  <div class="preview" data-hover-preview aria-hidden="true">
+    {services.map((s) => <Image src={photo(s.image)} alt="" widths={[480, 720]} sizes="360px" loading="lazy" />)}
+  </div>
+</section>
+
+<style>
+  .list { list-style: none; margin: clamp(3rem, 6vw, 5rem) 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .row { position: relative; display: grid; grid-template-columns: 5rem 1fr auto; align-items: start; gap: 1.5rem; padding: clamp(1.8rem, 3.5vw, 3rem) 0; border-bottom: 1px solid var(--line); isolation: isolate; }
+  .row::before { content: ''; position: absolute; inset: 0 calc(-1 * var(--gutter)); z-index: -1; background: var(--surface); transform: scaleY(0); transform-origin: bottom; transition: transform 0.6s var(--ease-out); }
+  .row:hover::before { transform: scaleY(1); }
+  .num { font-family: var(--font-display); font-weight: 600; color: var(--muted); font-size: var(--step-1); padding-top: 0.4rem; }
+  h3 { font-size: var(--step-3); transition: transform 0.6s var(--ease-out), color 0.3s; }
+  .row:hover h3 { transform: translateX(0.6rem); color: var(--cyan); }
+  .main p { color: var(--muted); max-width: 46ch; margin-top: 0.9rem; font-size: var(--step-1); line-height: 1.45; }
+  .items { list-style: none; padding: 0; margin: 1.3rem 0 0; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .items li { font-size: 0.88rem; padding: 0.35rem 0.85rem; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); }
+  .thumb { display: none; }
+  .go { width: 3.6rem; height: 3.6rem; display: grid; place-items: center; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--line); transition: background-color 0.3s, color 0.3s, transform 0.6s var(--ease-out); }
+  .go :global(svg) { width: 1.4rem; height: 1.4rem; transform: rotate(-45deg); transition: transform 0.5s var(--ease-out); }
+  .row:hover .go { background: var(--cyan); color: var(--ink); box-shadow: none; }
+  .row:hover .go :global(svg) { transform: rotate(0); }
+
+  .preview { position: fixed; top: 0; left: 0; z-index: 40; width: clamp(240px, 22vw, 360px); aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; pointer-events: none; opacity: 0; scale: 0.6; transition: opacity 0.35s, scale 0.5s var(--ease-out); box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.45); }
+  .preview.on { opacity: 1; scale: 1; }
+  .preview :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.35s; }
+  .preview :global(img.on) { opacity: 1; }
+
+  @media (max-width: 900px), (hover: none) {
+    .preview { display: none; }
+    .row { grid-template-columns: 1fr auto; }
+    .num { grid-column: 1 / -1; padding: 0; }
+    .thumb { display: block; grid-column: 1 / -1; grid-row: 2; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: calc(var(--radius) * 0.75); }
+    .main { grid-column: 1; }
+    .go { width: 3rem; height: 3rem; }
+  }
+</style>

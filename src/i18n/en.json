@@ -1,7 +1,0 @@
-{
-  "nav": { "services": "Services", "work": "Work", "process": "Process", "about": "About", "contact": "Get a quote" },
-  "hero": { "eyebrow": "Printing & Packaging", "title": "Print that people pick up.", "cta": "Request a quote" },
-  "marquee": ["Offset printing", "Custom boxes", "Labels & stickers", "Brochures", "Paper bags", "Business cards"],
-  "sections": { "services": "What we make", "work": "Recent work", "process": "How it works", "about": "About Prottoya", "contact": "Start your order" },
-  "toggles": { "theme": "Toggle dark mode", "lang": "বাংলা" }
-}

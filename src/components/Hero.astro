@@ -1,0 +1,88 @@
+---
+import { getImage } from 'astro:assets';
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { copy, contact, cubeFaces, photo, type Lang } from '../data/site';
+const { lang } = Astro.props as { lang: Lang };
+const t = copy[lang].hero;
+const faces = await Promise.all(cubeFaces.map((n) => getImage({ src: photo(n), width: 720, height: 720, fit: 'cover', format: 'webp' })));
+const wa = `https://wa.me/${contact.whatsapp}`;
+---
+<section class="hero" data-hero>
+  <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span>
+  <span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+  <div class="container grid">
+    <div class="copy">
+      <p class="kicker" data-reveal>{t.eyebrow}</p>
+      <h1 class="title">
+        {t.title.map((line, i) => <span class="line-mask"><span class={i === 1 ? 'accent' : undefined}>{line}</span></span>)}
+      </h1>
+      <p class="sub" data-reveal>{t.sub}</p>
+      <div class="ctas" data-reveal>
+        <a class="btn" href="#contact" data-magnetic>{t.cta}<Icon name="arrow" /></a>
+        <a class="btn ghost" href={wa} target="_blank" rel="noopener" data-magnetic><Icon name="whatsapp" />{t.whatsapp}</a>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <svg class="reg" viewBox="0 0 100 100" data-spin><circle cx="50" cy="50" r="30" /><circle cx="50" cy="50" r="14" /><path d="M50 0v100M0 50h100" /></svg>
+      <div class="scene" data-cube-scene>
+        <div class="cube" data-cube>
+          <div class="face f-front logo-face"><Logo size={200} /></div>
+          {faces.map((img, i) => <div class={`face f-${['back', 'right', 'left', 'top', 'bottom'][i]}`}><img src={img.src} alt="" width="720" height="720" loading="eager" decoding="async" /></div>)}
+        </div>
+        <div class="shadow"></div>
+      </div>
+      <div class="cmyk"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+  <a class="scroll" href="#services" aria-label={t.scroll}><span>{t.scroll}</span></a>
+</section>
+
+<style>
+  .hero { position: relative; min-height: 100svh; display: grid; align-items: center; padding-block: 8rem 5rem; overflow: clip; }
+  .grid { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); }
+  .title { font-size: var(--step-4); margin-block: 1.4rem 1.8rem; }
+  .title .accent { color: var(--cyan); font-style: italic; font-weight: 800; }
+  :lang(bn) .title { font-size: calc(var(--step-4) * 0.82); }
+  .sub { font-size: var(--step-1); color: var(--muted); max-width: 34ch; line-height: 1.5; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.2rem; }
+
+  .crop { position: absolute; width: 28px; height: 28px; border: 0 solid var(--line); pointer-events: none; }
+  .crop.tl { top: 6.5rem; left: 2vw; border-top-width: 1px; border-left-width: 1px; }
+  .crop.tr { top: 6.5rem; right: 2vw; border-top-width: 1px; border-right-width: 1px; }
+  .crop.bl { bottom: 2rem; left: 2vw; border-bottom-width: 1px; border-left-width: 1px; }
+  .crop.br { bottom: 2rem; right: 2vw; border-bottom-width: 1px; border-right-width: 1px; }
+
+  .stage { position: relative; display: grid; place-items: center; aspect-ratio: 1; }
+  .reg { position: absolute; width: 92%; fill: none; stroke: var(--line); stroke-width: 0.35; }
+  .scene { --size: clamp(180px, 19vw, 300px); width: var(--size); height: var(--size); perspective: 2000px; position: relative; }
+  .cube { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(var(--rx, -22deg)) rotateY(var(--ry, 38deg)); will-change: transform; }
+  .face { position: absolute; inset: 0; border-radius: 18px; overflow: hidden; backface-visibility: hidden; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.06); background: var(--surface); }
+  .face img { width: 100%; height: 100%; object-fit: cover; }
+  .logo-face { display: grid; place-items: center; color: var(--cyan); background: #fff; }
+  .logo-face :global(svg) { width: 58%; height: auto; }
+  .f-front { transform: translateZ(calc(var(--size) / 2)); }
+  .f-back { transform: rotateY(180deg) translateZ(calc(var(--size) / 2)); }
+  .f-right { transform: rotateY(90deg) translateZ(calc(var(--size) / 2)); }
+  .f-left { transform: rotateY(-90deg) translateZ(calc(var(--size) / 2)); }
+  .f-top { transform: rotateX(90deg) translateZ(calc(var(--size) / 2)); }
+  .f-bottom { transform: rotateX(-90deg) translateZ(calc(var(--size) / 2)); }
+  .shadow { position: absolute; left: 10%; right: 10%; bottom: -32%; height: 14%; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--ink) 28%, transparent), transparent); filter: blur(6px); }
+  .cmyk { position: absolute; right: 4%; bottom: 6%; display: flex; gap: 6px; }
+  .cmyk i { width: 14px; height: 14px; border-radius: 50%; background: var(--cyan); }
+  .cmyk i:nth-child(2) { background: var(--magenta); }
+  .cmyk i:nth-child(3) { background: var(--yellow); }
+  .cmyk i:nth-child(4) { background: var(--text); }
+
+  .scroll { position: absolute; left: 50%; bottom: 1.6rem; translate: -50% 0; display: grid; justify-items: center; gap: 0.5rem; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+  .scroll::after { content: ''; width: 1px; height: 2.6rem; background: linear-gradient(var(--muted), transparent); animation: drip 2s var(--ease-out) infinite; transform-origin: top; }
+  @keyframes drip { 0% { transform: scaleY(0); } 60% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+    .stage { order: -1; width: min(78vw, 360px); margin-inline: auto; margin-bottom: -1rem; }
+    .scene { --size: min(40vw, 180px); }
+    .hero { padding-top: 6rem; }
+    .scroll { display: none; }
+  }
+</style>
