@@ -6,44 +6,33 @@ const { lang } = Astro.props as { lang: Lang };
 const t = copy[lang];
 ---
 <footer class="footer">
-  <div class="container top">
-    <div class="brand"><span class="mark"><Logo size={56} /></span><p>{t.footer.tagline}</p></div>
+  <div class="container row">
+    <div class="brand"><span class="mark"><Logo size={32} /></span><span>{t.name}</span></div>
     <nav aria-label="Footer">
       <a href="#services">{t.nav.services}</a><a href="#work">{t.nav.work}</a><a href="#process">{t.nav.process}</a><a href="#contact">{t.nav.contact}</a>
     </nav>
     <div class="links">
-      <a href={`tel:${contact.phoneIntl}`}><Icon name="phone" />{contact.phone}</a>
-      <a href={`mailto:${contact.email}`}><Icon name="mail" />{contact.email}</a>
-      <a href={contact.facebook} target="_blank" rel="noopener"><Icon name="facebook" />Facebook</a>
+      <a href={`tel:${contact.phoneIntl}`} aria-label={contact.phone}><Icon name="phone" /></a>
+      <a href={`mailto:${contact.email}`} aria-label={contact.email}><Icon name="mail" /></a>
+      <a href={contact.facebook} target="_blank" rel="noopener" aria-label="Facebook"><Icon name="facebook" /></a>
     </div>
   </div>
-  <div class="giant" aria-hidden="true" data-giant>{'Prottoya'.split('').map((c) => <span>{c}</span>)}</div>
   <div class="container bottom">
     <span>© {new Date().getFullYear()} {t.name}. {t.footer.rights}</span>
-    <span class="cmyk" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span>{t.footer.tagline}</span>
   </div>
 </footer>
 
 <style>
-  .footer { background: var(--invert-bg); color: var(--invert-text); padding-top: clamp(4rem, 8vw, 7rem); overflow: hidden; }
-  .top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; }
-  .brand { display: grid; gap: 1.2rem; max-width: 26rem; font-size: var(--step-1); line-height: 1.4; }
-  .mark { color: var(--cyan); }
-  nav, .links { display: grid; gap: 0.7rem; align-content: start; }
-  a { text-decoration: none; opacity: 0.8; transition: opacity 0.2s, color 0.2s; display: inline-flex; gap: 0.6rem; align-items: center; width: fit-content; overflow-wrap: anywhere; }
+  .footer { background: var(--invert-bg); color: var(--invert-text); padding-top: 2.5rem; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; padding-bottom: 1.75rem; border-bottom: 1px solid color-mix(in srgb, var(--invert-text) 14%, transparent); }
+  .brand { display: flex; align-items: center; gap: 0.7rem; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+  .mark { color: var(--cyan); display: flex; }
+  nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; font-size: 0.92rem; }
+  .links { display: flex; gap: 0.5rem; }
+  a { text-decoration: none; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
   a:hover { opacity: 1; color: var(--cyan); }
-  a :global(svg) { width: 1.1rem; height: 1.1rem; }
-  .giant { display: flex; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: clamp(4rem, 19.5vw, 22rem); letter-spacing: -0.06em; line-height: 0.8; margin-top: clamp(3rem, 6vw, 5rem); color: var(--cyan); user-select: none; }
-  .giant span { display: inline-block; transition: color 0.3s, transform 0.5s var(--ease-out); }
-  .giant span:hover { transform: translateY(-0.08em); }
-  .giant span:nth-child(3n + 1):hover { color: var(--magenta); }
-  .giant span:nth-child(3n + 2):hover { color: var(--yellow); }
-  .giant span:nth-child(3n):hover { color: var(--orange); }
-  .bottom { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.6rem; font-size: 0.85rem; opacity: 0.75; flex-wrap: wrap; }
-  .cmyk { display: flex; gap: 6px; }
-  .cmyk i { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); }
-  .cmyk i:nth-child(2) { background: var(--magenta); }
-  .cmyk i:nth-child(3) { background: var(--yellow); }
-  .cmyk i:nth-child(4) { background: var(--invert-text); }
-  @media (max-width: 760px) { .top { grid-template-columns: 1fr 1fr; } .brand { grid-column: 1 / -1; } }
+  .links a { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--invert-text) 18%, transparent); }
+  .links a :global(svg) { width: 1rem; height: 1rem; }
+  .bottom { display: flex; justify-content: space-between; gap: 0.5rem 1rem; flex-wrap: wrap; padding-block: 1.25rem; font-size: 0.8rem; opacity: 0.6; }
 </style>

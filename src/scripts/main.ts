@@ -203,7 +203,6 @@ function initMotion() {
   });
 
   /* Footer wordmark rises letter by letter */
-  gsap.from('[data-giant] span', { yPercent: 100, opacity: 0, duration: 1.2, ease: 'expo.out', stagger: 0.05, scrollTrigger: { trigger: '[data-giant]', start: 'top 95%' } });
 
   /* Magnetic buttons */
   if (finePointer) {

@@ -18,7 +18,7 @@ const t = copy[lang].work;
       {work.map((w, i) => (
         <figure class:list={['card', `tilt-${i % 3}`]} data-tilt>
           <div class="frame">
-            <Image src={photo(w.image)} alt={w.title[lang]} widths={[420, 640, 900]} sizes="(max-width: 700px) 72vw, 30vw" loading={i < 3 ? 'eager' : 'lazy'} />
+            <Image src={photo(w.image)} alt={w.title[lang]} widths={[420, 640, 900]} sizes="(max-width: 700px) 72vw, 30vw" loading="lazy" />
           </div>
           <figcaption><span>{String(i + 1).padStart(2, '0')}</span>{w.title[lang]}</figcaption>
         </figure>
@@ -33,7 +33,7 @@ const t = copy[lang].work;
   .pin { min-height: 100svh; padding-block: 5rem 1rem; display: flex; flex-direction: column; justify-content: center; }
   .head { display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
   .rail { display: flex; gap: clamp(1rem, 2vw, 2rem); padding-inline: var(--gutter); width: max-content; will-change: transform; }
-  .card { margin: 0; width: clamp(240px, 26vw, 400px); flex: none; }
+  .card { margin: 0; width: clamp(200px, 21vw, 320px); flex: none; }
   .tilt-1 { margin-top: 3rem; }
   .tilt-2 { margin-top: 1.25rem; }
   .frame { aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; background: var(--surface-2); transform: perspective(900px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg)); transition: transform 0.5s var(--ease-out); }
