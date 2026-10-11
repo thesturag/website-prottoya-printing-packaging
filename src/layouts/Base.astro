@@ -24,7 +24,8 @@ const schema = {
   address: { '@type': 'PostalAddress', streetAddress: '18, Sayed Hasan Ali Lane, Babu Bazar', addressLocality: 'Dhaka', postalCode: '1100', addressCountry: 'BD' },
   areaServed: ['Dhaka', 'Gazipur', 'Narayanganj', 'Chittagong', "Cox's Bazar", 'Khulna', 'Rajshahi', 'Sylhet', 'Barisal', 'Dinajpur'],
 };
-const fonts = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hind+Siliguri:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap';
+// Bengali glyphs are only needed on the Bangla page.
+const fonts = `https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800${lang === 'bn' ? '&family=Hind+Siliguri:wght@400;500;600;700' : ''}&family=Inter+Tight:wght@400;500;600;700&display=swap`;
 ---
 <!doctype html>
 <html lang={lang} data-theme="light">

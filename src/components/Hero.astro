@@ -28,7 +28,7 @@ const wa = `https://wa.me/${contact.whatsapp}`;
       <div class="scene" data-cube-scene>
         <div class="cube" data-cube>
           <div class="face f-front logo-face"><Logo size={200} /></div>
-          {faces.map((img, i) => <div class={`face f-${['back', 'right', 'left', 'top', 'bottom'][i]}`}><img src={img.src} alt="" width="480" height="480" loading="eager" decoding="async" /></div>)}
+          {faces.map((img, i) => <div class={`face f-${['back', 'right', 'left', 'top', 'bottom'][i]}`}><img src={img.src} alt="" width="480" height="480" fetchpriority="low" decoding="async" /></div>)}
         </div>
         <div class="shadow"></div>
       </div>
