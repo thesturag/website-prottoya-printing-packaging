@@ -1,0 +1,32 @@
+---
+import { copy, type Lang } from '../data/site';
+const { lang, reverse = false } = Astro.props as { lang: Lang; reverse?: boolean };
+const items = copy[lang].marquee;
+---
+<div class:list={['clip', { reverse }]} aria-hidden="true">
+<div class:list={['marquee', { reverse }]}>
+  <div class="track" data-marquee data-dir={reverse ? -1 : 1}>
+    {[0, 1].map(() => (
+      <div class="group">
+        {items.map((item, i) => <span class="item">{item}<i class={`dot d${i % 3}`}></i></span>)}
+      </div>
+    ))}
+  </div>
+</div>
+</div>
+
+<style>
+  .clip.reverse { overflow: clip; padding-block: 2.5rem; }
+  .marquee { overflow: hidden; padding-block: clamp(1.2rem, 2.5vw, 2rem); background: var(--invert-bg); color: var(--invert-text); }
+  .marquee.reverse { background: var(--cyan); color: var(--ink); rotate: -2deg; width: 104%; margin-left: -2%; }
+  .track { display: flex; width: max-content; }
+  .group { display: flex; flex: none; }
+  .item { display: inline-flex; align-items: center; gap: clamp(1.5rem, 3vw, 3rem); padding-right: clamp(1.5rem, 3vw, 3rem); font-family: var(--font-display); font-weight: 700; font-size: var(--step-2); letter-spacing: -0.03em; white-space: nowrap; line-height: 1.1; }
+  :lang(bn) .item { letter-spacing: 0; }
+  .dot { width: 0.35em; height: 0.35em; border-radius: 50%; background: var(--cyan); flex: none; }
+  .reverse .dot { background: var(--ink); }
+  .d1 { background: var(--magenta); }
+  .d2 { background: var(--yellow); }
+  @media (prefers-reduced-motion: no-preference) { .track:not([data-js]) { animation: slide 40s linear infinite; } }
+  @keyframes slide { to { transform: translateX(-50%); } }
+</style>

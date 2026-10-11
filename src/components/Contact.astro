@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { copy, contact, services, photo, type Lang } from '../data/site';
+const { lang } = Astro.props as { lang: Lang };
+const v = copy[lang].visit;
+const t = copy[lang].contact;
+---
+<section class="section visit" id="visit">
+  <div class="container vgrid">
+    <div class="vimg" data-parallax-wrap>
+      <Image src={photo(30)} alt="" widths={[600, 900, 1200]} sizes="(max-width: 900px) 92vw, 45vw" data-parallax />
+      <span class="badge">{v.hours}</span>
+    </div>
+    <div>
+      <h2 class="h2" data-reveal>{v.title}</h2>
+      <p class="lead" data-reveal>{v.body}</p>
+      <a class="addr" href={contact.mapUrl} target="_blank" rel="noopener" data-reveal>
+        <Icon name="pin" /><span>{v.address}<small>{v.map} ↗</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container cgrid">
+    <div>
+      <h2 class="h2" data-reveal>{t.title}</h2>
+      <p class="lead" data-reveal>{t.body}</p>
+      <ul class="channels" data-reveal>
+        <li><a href={`tel:${contact.phoneIntl}`}><Icon name="phone" /><span><small>{t.call}</small>{contact.phone}</span></a></li>
+        <li><a href={`mailto:${contact.email}`}><Icon name="mail" /><span><small>{t.email}</small>{contact.email}</span></a></li>
+      </ul>
+    </div>
+    <form class="form" data-quote-form data-wa={contact.whatsapp} data-sent={t.sent} data-fallback={t.fallback} data-sending={t.sending} data-msg={JSON.stringify(t.msg)} data-reveal>
+      <label><span>{t.name}</span><input name="name" autocomplete="name" required /></label>
+      <label><span>{t.phone}</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required /></label>
+      <fieldset>
+        <legend>{t.product}</legend>
+        <div class="choices">
+          {services.map((s, i) => <label class="choice"><input type="radio" name="product" value={s.title[lang]} data-product-id={s.id} checked={i === 0} /><span>{s.title[lang]}</span></label>)}
+          <label class="choice"><input type="radio" name="product" value={t.other} /><span>{t.other}</span></label>
+        </div>
+      </fieldset>
+      <label><span>{t.qty}</span><input name="quantity" inputmode="numeric" placeholder="500" /></label>
+      <label class="wide"><span>{t.details}</span><textarea name="details" rows="3"></textarea></label>
+      <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button class="btn submit" type="submit" data-magnetic><Icon name="whatsapp" />{t.send}</button>
+      <p class="hint">{t.hint}</p>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .vgrid, .cgrid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .vimg { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; }
+  .vimg :global(img) { width: 100%; height: 118%; object-fit: cover; margin-top: -9%; }
+  .badge { position: absolute; left: 1.2rem; bottom: 1.2rem; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1rem; border-radius: 999px; background: var(--paper); color: var(--ink); font-weight: 600; font-size: 0.9rem; }
+  .lead { margin-top: 1.4rem; color: var(--muted); font-size: var(--step-1); line-height: 1.5; max-width: 38ch; }
+  .addr { margin-top: 2rem; display: flex; gap: 1rem; align-items: start; text-decoration: none; padding: 1.2rem 1.4rem; border-radius: var(--radius); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); transition: transform 0.5s var(--ease-out); max-width: 30rem; }
+  .addr:hover { transform: translateY(-4px); }
+  .addr :global(svg) { width: 1.5rem; height: 1.5rem; color: var(--cyan); flex: none; margin-top: 0.15rem; }
+  .addr span { display: grid; gap: 0.3rem; font-weight: 600; }
+  .addr small, .channels small { font-weight: 500; color: var(--muted); font-size: 0.85rem; }
+
+  .contact { padding-top: 0; }
+  .cgrid { align-items: start; }
+  .channels { list-style: none; padding: 0; margin: 2.2rem 0 0; display: grid; gap: 0.6rem; max-width: 26rem; }
+  .channels a { display: flex; gap: 1rem; align-items: center; text-decoration: none; padding: 0.9rem 1.1rem; border-radius: 1rem; box-shadow: inset 0 0 0 1px var(--line); transition: background-color 0.3s, color 0.3s; }
+  .channels a:hover { background: var(--cyan); color: var(--ink); }
+  .channels a:hover small { color: var(--ink); }
+  .channels :global(svg) { width: 1.4rem; height: 1.4rem; flex: none; }
+  .channels span { display: grid; font-weight: 600; overflow-wrap: anywhere; }
+
+  .form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: clamp(1.4rem, 3vw, 2.5rem); border-radius: calc(var(--radius) * 1.3); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line), 0 40px 80px -40px rgb(24 24 48 / 0.35); }
+  .form > label, fieldset { display: grid; gap: 0.45rem; font-size: 0.9rem; font-weight: 600; }
+  fieldset, .wide { grid-column: 1 / -1; }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  legend { padding: 0; margin-bottom: 0.45rem; }
+  input, textarea { font: inherit; font-weight: 400; color: var(--text); background: var(--bg); border: 0; border-radius: 0.9rem; padding: 0.85rem 1rem; box-shadow: inset 0 0 0 1px var(--line); transition: box-shadow 0.25s; width: 100%; }
+  ::placeholder { color: var(--muted); opacity: 1; }
+  .hint { grid-column: 1 / -1; margin-top: -0.4rem; color: var(--muted); font-size: 0.85rem; text-align: center; }
+  input:focus, textarea:focus { outline: none; box-shadow: inset 0 0 0 2px var(--cyan); }
+  textarea { resize: vertical; min-height: 6rem; }
+  .choices { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .choice span { display: inline-block; padding: 0.55rem 1rem; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); font-weight: 500; cursor: pointer; transition: background-color 0.25s, color 0.25s; }
+  .choice input:checked + span { background: var(--text); color: var(--bg); box-shadow: none; }
+  .choice input:focus-visible + span { outline: 2px solid var(--cyan); outline-offset: 2px; }
+  .hp { position: absolute; left: -9999px; }
+  .submit { grid-column: 1 / -1; justify-content: center; padding-block: 1.15rem; font-size: 1.05rem; }
+  .status { grid-column: 1 / -1; color: var(--muted); font-size: 0.92rem; min-height: 1.4em; }
+  @media (max-width: 900px) { .vgrid, .cgrid { grid-template-columns: 1fr; } .vimg { aspect-ratio: 4 / 3; } }
+  @media (max-width: 520px) { .form { grid-template-columns: 1fr; } }
+</style>

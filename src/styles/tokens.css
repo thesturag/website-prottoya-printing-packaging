@@ -1,0 +1,48 @@
+/* Palette from the Prottoya logo: cube blue plus the CMYK paint-splash accents. */
+:root {
+  --cyan: #13abe4;
+  --cyan-soft: #45a6d8;
+  --magenta: #c8288c;
+  --yellow: #f0c828;
+  --orange: #f07828;
+  --ink: #181830;
+  --paper: #f4f6f7;
+
+  --bg: var(--paper);
+  --surface: #ffffff;
+  --surface-2: #e9edf0;
+  --text: var(--ink);
+  --muted: #555872;
+  --line: color-mix(in srgb, var(--ink) 14%, transparent);
+  --brand: var(--cyan);
+  --accent-text: #0b85b8; /* cyan deepened to 3:1+ on paper for large text */
+  --on-brand: var(--ink);
+  --invert-bg: var(--ink);
+  --invert-text: var(--paper);
+
+  --font-sans: var(--font-inter-tight);
+  --font-display: var(--font-bricolage);
+
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.15vw, 1.0625rem);
+  --step-1: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
+  --step-2: clamp(1.35rem, 1.15rem + 0.9vw, 1.9rem);
+  --step-3: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  --step-4: clamp(2.3rem, 1.5rem + 3.6vw, 4.75rem);
+
+  --gutter: max(16px, 4vw);
+  --radius: 1.1rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme='dark'] {
+  --bg: #0d0d1a;
+  --surface: #181830;
+  --surface-2: #20203c;
+  --text: var(--paper);
+  --muted: #a6a9c2;
+  --line: color-mix(in srgb, var(--paper) 14%, transparent);
+  --invert-bg: #181830;
+  --accent-text: var(--cyan);
+  --invert-text: var(--paper);
+}

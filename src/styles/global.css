@@ -1,0 +1,64 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 6rem; }
+html[data-theme='light'] { color-scheme: light; }
+html[data-theme='dark'] { color-scheme: dark; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 var(--step-0)/1.6 var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+:lang(bn) body, body:lang(bn) { --font-sans: 'Hind Siliguri', var(--font-inter-tight); line-height: 1.75; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+:lang(bn) :is(h1, h2, h3) { letter-spacing: 0; line-height: 1.2; }
+p { margin: 0; text-wrap: pretty; }
+::selection { background: var(--cyan); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+
+.container { width: min(1180px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+.section { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+.kicker { display: inline-flex; align-items: center; gap: 0.6rem; font-size: var(--step--1); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+:lang(bn) .kicker { letter-spacing: 0.02em; }
+.kicker::before { content: ''; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--cyan); box-shadow: 0.8rem 0 0 var(--magenta), 1.6rem 0 0 var(--yellow); margin-right: 1.6rem; }
+.h2 { font-size: var(--step-3); margin-top: 0; max-width: 16ch; }
+
+.btn { --bg-btn: var(--brand); position: relative; display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.8rem 1.3rem; border-radius: 999px; background: var(--bg-btn); color: var(--on-brand); font-weight: 600; text-decoration: none; border: 0; cursor: pointer; overflow: hidden; isolation: isolate; transition: transform 0.4s var(--ease-out); }
+.btn::after { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--ink); transform: translateY(101%); transition: transform 0.5s var(--ease-out); border-radius: inherit; }
+.btn:hover::after { transform: none; }
+.btn:hover { color: var(--paper); }
+.btn.ghost { --bg-btn: transparent; color: var(--text); box-shadow: inset 0 0 0 1.5px var(--line); }
+.btn.ghost::after { background: var(--text); }
+.btn.ghost:hover { color: var(--bg); }
+.btn svg { width: 1.1em; height: 1.1em; flex: none; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Reveal states are only hidden once JS confirms motion is on. */
+.js-motion [data-reveal] { opacity: 0; transform: translateY(2.5rem); }
+.js-motion .line-mask { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.js-motion .line-mask > span { display: block; transform: translateY(105%); }
+/* Hero intro runs in CSS so it starts at first paint, not after the JS bundle loads. */
+.js-motion .hero .line-mask > span { animation: rise 1.2s var(--ease-out) both; }
+.js-motion .hero .line-mask:nth-child(2) > span { animation-delay: 0.08s; }
+.js-motion .hero .line-mask:nth-child(3) > span { animation-delay: 0.16s; }
+.js-motion .intro { animation: fade-up 1s var(--ease-out) var(--d, 0s) both; }
+/* Phones: hero copy appears at once (it is the LCP element); desktop keeps the fade. */
+@media (max-width: 900px) { .js-motion .intro { animation: none; } }
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Drop movement but keep colour and opacity feedback on hover and focus. */
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-property: color, background-color, border-color, box-shadow, opacity !important; }
+}
+
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }

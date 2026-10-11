@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { copy, contact, work, photo, type Lang } from '../data/site';
+const { lang } = Astro.props as { lang: Lang };
+const t = copy[lang].work;
+---
+<section class="work" id="work" data-hscroll>
+  <div class="pin" data-hscroll-pin>
+    <div class="container head">
+      <div>
+        <h2 class="h2" data-reveal>{t.title}</h2>
+      </div>
+      <a class="btn ghost" href={contact.facebook} target="_blank" rel="noopener" data-reveal data-magnetic><Icon name="facebook" />{t.all}</a>
+    </div>
+    <div class="rail" data-hscroll-track>
+      {work.map((w, i) => (
+        <figure class="card" data-tilt>
+          <div class="frame">
+            <Image src={photo(w.image)} alt={w.title[lang]} widths={[420, 640, 900]} sizes="(max-width: 700px) 72vw, 30vw" loading="lazy" />
+          </div>
+          <figcaption><span>{String(i + 1).padStart(2, '0')}</span>{w.title[lang]}</figcaption>
+        </figure>
+      ))}
+    </div>
+    <p class="container hint">{t.hint}</p>
+  </div>
+</section>
+
+<style>
+  .work { padding-block: clamp(1rem, 2vw, 2rem) clamp(2.5rem, 5vw, 4rem); overflow: clip; }
+  .pin { padding-block: 1rem; }
+  .head { display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+  .rail { display: flex; gap: clamp(1rem, 2vw, 2rem); padding-inline: var(--gutter); width: max-content; will-change: transform; }
+  .card { margin: 0; width: min(clamp(200px, 21vw, 320px), 40vh); flex: none; }
+  .frame { aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; background: var(--surface-2); transform: perspective(900px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg)); transition: transform 0.5s var(--ease-out); }
+  .frame :global(img) { width: 100%; height: 100%; object-fit: cover; scale: 1.08; transition: scale 0.9s var(--ease-out); }
+  .card:hover .frame :global(img) { scale: 1; }
+  figcaption { display: flex; gap: 0.8rem; align-items: baseline; margin-top: 1rem; font-weight: 600; font-size: var(--step-1); }
+  figcaption span { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+  .hint { display: none; margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; }
+  :global(.js-motion) .work:not(.static) .rail { overflow: visible; }
+  @media (max-width: 900px), (prefers-reduced-motion: reduce) {
+    .rail { width: auto; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: none; }
+    .rail::-webkit-scrollbar { display: none; }
+    .hint { display: block; }
+    .card { scroll-snap-align: center; width: 72vw; max-width: 340px; }
+  }
+</style>

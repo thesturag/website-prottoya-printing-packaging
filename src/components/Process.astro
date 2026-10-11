@@ -1,0 +1,61 @@
+---
+import { copy, type Lang } from '../data/site';
+const { lang } = Astro.props as { lang: Lang };
+const t = copy[lang].process;
+const stats = copy[lang].stats;
+const num = (n: number) => n.toLocaleString(lang === 'bn' ? 'bn-BD' : 'en-US');
+---
+<section class="section process" id="process">
+  <div class="container grid">
+    <div class="side">
+      <h2 class="h2" data-reveal>{t.title}</h2>
+    </div>
+    <ol class="steps" data-steps>
+      <span class="rail" aria-hidden="true"><span class="fill" data-steps-fill></span></span>
+      {t.steps.map((s, i) => (
+        <li class="step" data-reveal>
+          <span class="n">{num(i + 1)}</span>
+          <h3>{s.t}</h3>
+          <p>{s.d}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+  <div class="container">
+    <dl class="stats">
+      {stats.map((s) => (
+        <div class="stat" data-reveal>
+          <dt>{s.label}</dt>
+          <dd><span data-count={s.n} data-locale={lang === 'bn' ? 'bn-BD' : 'en-US'}>{num(s.n)}</span>{s.suffix}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<style>
+  .process { background: var(--invert-bg); color: var(--invert-text); border-radius: clamp(1.5rem, 4vw, 3.5rem); margin-inline: clamp(0px, 1vw, 1rem); }
+  .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+  .side { position: sticky; top: 7rem; }
+  .steps { list-style: none; margin: 0; padding: 0 0 0 3.5rem; position: relative; display: grid; gap: clamp(2rem, 4vw, 3rem); }
+  .rail { position: absolute; left: 0.9rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: color-mix(in srgb, var(--invert-text) 18%, transparent); border-radius: 2px; }
+  .fill { position: absolute; inset: 0; background: linear-gradient(var(--cyan), var(--magenta), var(--yellow)); transform-origin: top; transform: scaleY(var(--p, 0)); border-radius: inherit; }
+  .step { position: relative; }
+  .n { position: absolute; left: -3.5rem; top: 0; width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: 50%; background: var(--invert-bg); box-shadow: inset 0 0 0 2px var(--cyan); font-weight: 700; font-size: 0.9rem; color: var(--cyan); }
+  h3 { font-size: var(--step-2); }
+  .step p { margin-top: 0.75rem; color: color-mix(in srgb, var(--invert-text) 70%, transparent); max-width: 40ch; font-size: var(--step-1); line-height: 1.45; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: clamp(3rem, 6vw, 5rem) 0 0; border-top: 1px solid color-mix(in srgb, var(--invert-text) 18%, transparent); }
+  .stat { padding: 2rem 1.5rem 0 0; display: flex; flex-direction: column-reverse; gap: 0.5rem; }
+  dd { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: var(--step-3); line-height: 1; letter-spacing: -0.04em; }
+  .stat:nth-child(1) dd { color: var(--cyan); }
+  .stat:nth-child(2) dd { color: var(--magenta); }
+  .stat:nth-child(3) dd { color: var(--yellow); }
+  dt { color: color-mix(in srgb, var(--invert-text) 70%, transparent); }
+  :global([data-theme='dark']) .stat:nth-child(2) dd { color: var(--magenta); filter: brightness(1.05); }
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+    .side { position: static; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    dd { font-size: var(--step-2); }
+  }
+</style>

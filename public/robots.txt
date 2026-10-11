@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prottoya.vercel.app/sitemap.xml
