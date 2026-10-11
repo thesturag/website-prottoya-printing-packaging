@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import type { Lang } from '../i18n';
+
+interface Props { lang: Lang; title?: string; description?: string }
+const { lang, title = 'Prottoya Printing & Packaging', description = 'Printing and packaging in Bangladesh: boxes, labels, brochures and more.' } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hind+Siliguri:wght@400;600&family=Inter+Tight:wght@400;500;600&display=swap" />
+    <script is:inline>
+      (() => {
+        let theme;
+        try { theme = localStorage.getItem('theme'); } catch {}
+        theme ??= matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main><slot /></main>
+    <script>
+      import '../scripts/motion';
+    </script>
+  </body>
+</html>

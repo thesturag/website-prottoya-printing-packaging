@@ -1,0 +1,47 @@
+---
+import { t, type Lang } from '../i18n';
+const { lang } = Astro.props as { lang: Lang };
+const copy = t(lang);
+const base = lang === 'en' ? '/' : '/bn/';
+const otherHref = lang === 'en' ? '/bn/' : '/';
+---
+<header class="header">
+  <div class="container bar">
+    <a class="logo" href={base} aria-label="Prottoya Printing & Packaging">Prottoya</a>
+    <nav aria-label="Primary">
+      <a href="#services">{copy.nav.services}</a>
+      <a href="#work">{copy.nav.work}</a>
+      <a href="#process">{copy.nav.process}</a>
+      <a href="#about">{copy.nav.about}</a>
+    </nav>
+    <div class="actions">
+      <a class="pill" href={otherHref} hreflang={lang === 'en' ? 'bn' : 'en'}>{copy.toggles.lang}</a>
+      <button class="pill icon" type="button" data-theme-toggle aria-label={copy.toggles.theme}>
+        <span aria-hidden="true">◐</span>
+      </button>
+      <a class="pill cta" href="#contact">{copy.nav.contact}</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header { position: fixed; inset: 0 0 auto; z-index: 50; padding-block: 1rem; backdrop-filter: blur(14px); background: color-mix(in oklch, var(--bg) 70%, transparent); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: var(--step-1); text-decoration: none; }
+  nav { display: flex; gap: 1.75rem; }
+  nav a { text-decoration: none; color: var(--muted); transition: color 0.2s; }
+  nav a:hover { color: var(--text); }
+  .actions { display: flex; gap: 0.5rem; }
+  .pill { border: 1px solid var(--line); background: transparent; color: var(--text); border-radius: 999px; padding: 0.45rem 1rem; font: inherit; font-size: 0.9rem; text-decoration: none; cursor: pointer; }
+  .pill.icon { padding-inline: 0.75rem; }
+  .cta { background: var(--brand); color: var(--brand-ink); border-color: transparent; }
+  @media (max-width: 860px) { nav { display: none; } .cta { display: none; } }
+</style>
+
+<script>
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch {}
+  });
+</script>

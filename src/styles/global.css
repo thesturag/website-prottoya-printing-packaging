@@ -1,0 +1,24 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html { color-scheme: light dark; -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 var(--step-0)/1.6 var(--font-sans);
+  transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
+  overflow-x: clip;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.05; letter-spacing: -0.02em; margin: 0; }
+.container { width: min(1280px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 10vw, 9rem); }
+[data-reveal] { opacity: 0; transform: translateY(2rem); }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; }
+  * { animation: none !important; transition: none !important; }
+}
